@@ -15,7 +15,7 @@ from flask_admin.contrib.sqla import ModelView
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:9923@localhost/db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:root@123@localhost/db'
 
 db = SQLAlchemy(app)
 app.secret_key = 'secret_key'
@@ -304,7 +304,7 @@ def insert_data(qr_data):
         mydb = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="9923",
+            password="root@123",
             database="db"
         )
 
@@ -345,7 +345,7 @@ def insert_data_exit(qr_data):
         mydb = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="9923",
+            password="root@123",
             database="db"
         )
 
