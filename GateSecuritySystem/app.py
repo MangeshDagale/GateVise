@@ -15,7 +15,9 @@ from flask_admin.contrib.sqla import ModelView
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:root@123@localhost/db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root%4017@localhost:3306/db'
+
+
 
 db = SQLAlchemy(app)
 app.secret_key = 'secret_key'
@@ -196,7 +198,7 @@ def genrate_qr(qrdata):
     img.save(qr_path)
 
 
-#----------scaner-----
+#----------scanner-----
 def gen_frames():
     camera = cv2.VideoCapture(0)
     scanning = True
@@ -304,7 +306,7 @@ def insert_data(qr_data):
         mydb = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="root@123",
+            password="root@17",
             database="db"
         )
 
@@ -345,7 +347,7 @@ def insert_data_exit(qr_data):
         mydb = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="root@123",
+            password="root@17",
             database="db"
         )
 
@@ -399,7 +401,7 @@ def insert_data_exit(qr_data):
     mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="9923",
+    password="root@17",
     database="db")
 
     if mydb.is_connected():
