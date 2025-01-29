@@ -87,4 +87,4 @@ We welcome contributions from the community. If you have suggestions, bug report
 
 ## Contact
 
-For any questions or suggestions, feel free to contact me at akilshaikh4161@gmail.com .
+For any questions or suggestions, feel free to contact me at mangeshdagale17@gmail.com.
